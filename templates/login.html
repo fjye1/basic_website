@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+    <h1>Login</h1>
+    <form method="POST">
+        {{ form.hidden_tag() }}
+
+        <p>
+            {{ form.email.label }}<br>
+            {{ form.email(size=30) }}
+        </p>
+
+        <p>
+            {{ form.password.label }}<br>
+            {{ form.password(size=30) }}
+        </p>
+
+        <p>{{ form.submit() }}</p>
+    </form>
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        <ul>
+          {% for category, message in messages %}
+            <li>{{ message }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+</body>
+</html>

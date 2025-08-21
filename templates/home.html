@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flask Starter</title>
+</head>
+<body>
+<h1>Hello, TOM!</h1>
+<p>This is the Frag homepage Template.</p>
+<h1>you can loop items in hmtl with Jinja</h1>
+<h2> look at the code for this section and follow the code below</h2>
+    <ul>
+        {% for i in items %}
+            <li>{{ i }}</li>
+        {% endfor %}
+    </ul>
+<a href="/register">
+    <button type="button">Go to Register</button>
+</a>
+<a href="/login">
+    <button type="button">Go to Login</button>
+</a>
+</body>
+</html>
